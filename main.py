@@ -55,12 +55,13 @@ def main():
             cat_b_e_2 = st.radio('חוסר יכולת לזכור היבטים חשובים מהאירוע', ["לא", "כן"])
 
             cat_b_e_list = [parse_info(i) for i in [cat_b_e_1, cat_b_e_2]]
-
             st.divider()
+            
             st.subheader("C קריטריון", divider='blue')
             st.info("התסמינים מופיעים בדרך כלל בסמוך לאירוע הטראומטי, לאבחנה נדרשת התמדה תסמינית של שלושה ימים לפחות (כלומר 48 ש' ומעלה) ועד חודש ימים")
-            st.divider()
             cat_c = st.slider("משך התסמינים בימים", 0, 30, 0)
+            st.divider()
+
             st.subheader("D קריטריון", divider='blue')
             cat_d = st.radio('קיימת פגיעה תפקודית במישורים משפחתיים / חברתיים / תעסוקתיים / אחר', ["לא", "כן"])
             st.divider()
