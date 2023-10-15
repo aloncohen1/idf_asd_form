@@ -74,15 +74,16 @@ def main():
 
         if submitted:
 
-            has_asd = "החייל תקין"
+            has_asd = "לא קיימת תגובת דחק אקוטית"
 
             if parse_info(cat_a):
-                if any(cat_b_a_list) and any(cat_b_b_list) and any(cat_b_c_list) and any(cat_b_d_list) and any(cat_b_e_list):
+                if (any(cat_b_a_list) and any(cat_b_b_list) and any(cat_b_c_list) and
+                        any(cat_b_d_list) and any(cat_b_e_list)):
                     if sum(cat_b_a_list+cat_b_b_list+cat_b_c_list+cat_b_d_list+cat_b_e_list) >= 9:
                         if cat_c >= 3:
                             if parse_info(cat_d):
                                 if cat_e == "לא מיוחס לחומרים":
-                                    has_asd = "דחוף לאברבנל"
+                                    has_asd = "קיימת תגובת דחק אקוטית"
 
             home_holder.empty()
             st.title(has_asd)
