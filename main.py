@@ -56,7 +56,7 @@ def main():
 
             cat_b_e_list = [parse_info(i) for i in [cat_b_e_1, cat_b_e_2]]
             st.divider()
-            
+
             st.subheader("C קריטריון", divider='blue')
             st.info("התסמינים מופיעים בדרך כלל בסמוך לאירוע הטראומטי, לאבחנה נדרשת התמדה תסמינית של שלושה ימים לפחות (כלומר 48 ש' ומעלה) ועד חודש ימים")
             cat_c = st.slider("משך התסמינים בימים", 0, 30, 0)
@@ -81,7 +81,7 @@ def main():
                     if sum(cat_b_a_list+cat_b_b_list+cat_b_c_list+cat_b_d_list+cat_b_e_list) >= 9:
                         if cat_c >= 3:
                             if parse_info(cat_d):
-                                if cat_e == "לא מיוחס":
+                                if cat_e == "לא מיוחס לחומרים":
                                     has_asd = "דחוף לאברבנל"
 
             home_holder.empty()
